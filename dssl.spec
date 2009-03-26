@@ -16,8 +16,8 @@ URL:        http://www.ssltech.net/
 Source:     http://www.ssltech.net/downloads/%{name}-%{version}.tar.gz
 Patch0:		dssl-samples.diff
 BuildRequires:  openssl-devel
-BuildRequires:	libpcap-devel
-BuildRequires: zlib-devel
+BuildRequires:	pcap-devel
+BuildRequires:  zlib-devel
 %if %mdkversion < 200800
 BuildRoot:  %{_tmppath}/%{name}-%{version}
 %endif
