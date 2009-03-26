@@ -1,7 +1,7 @@
 %define name    dssl
 %define version 1.4.4
-%define release %mkrel 3
-%define major 1
+%define release %mkrel 4
+%define major 0
 %define api 1.4
 %define libname %mklibname %{name} %{api} %{major}
 %define develname %mklibname %{name} -d
@@ -10,7 +10,7 @@ Name:		%{name}
 Version:	%{version}
 Release:	%{release}
 Summary:    DSSL library: network capture and SSL decryption toolkit
-License:    GPL3
+License:    GPLv3+
 Group:      Networking/Other
 URL:        http://www.ssltech.net/
 Source:     http://www.ssltech.net/downloads/%{name}-%{version}.tar.gz
@@ -73,14 +73,14 @@ export LIBS=-lpcap
 %defattr(-,root,root)
 %doc docs/*
 %doc docs/dssl/*
-%{_libdir}/libdssl.so.0.0.0
-%{_libdir}/libdssl.so.0
-%{_libdir}/libdssl.so
+%{_libdir}/libdssl.so.%{major}*
+
 
 %files  -n %{develname}
 %defattr(-,root,root)
 %{_includedir}/dssl/*
 %{_bindir}/ssltrace
+%{_libdir}/libdssl.so
 %{_libdir}/libdssl.a
 %{_libdir}/libdssl.la
 
