@@ -65,9 +65,9 @@ export LIBS=-lpcap
 %make
 %install
 %makeinstall_std
-%{__rm} -rf %{buildroot}
 
 %clean
+%{__rm} -rf %{buildroot}
 
 %files -n %{libname}
 %defattr(-,root,root)
