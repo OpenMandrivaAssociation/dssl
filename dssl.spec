@@ -73,8 +73,9 @@ export LIBS=-lpcap
 %defattr(-,root,root)
 %doc docs/*
 %doc docs/dssl/*
+%{_libdir}/libdssl.so.0.0.0
+%{_libdir}/libdssl.so.0
 %{_libdir}/libdssl.so
-%{_libdir}/libdssl.so.*
 
 %files  -n %{develname}
 %defattr(-,root,root)
