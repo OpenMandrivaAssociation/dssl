@@ -1,6 +1,6 @@
 %define name    dssl
 %define version 1.4.4
-%define release %mkrel 2
+%define release %mkrel 3
 %define major 1
 %define api 1.4
 %define libname %mklibname %{name} %{api} %{major}
@@ -58,6 +58,7 @@ software.  These are .h files.
 %setup -q 
 %patch0 -p1 -b .sample_fix
 
+export LIBS=-lpcap 
 %configure2_5x --enable-shared
 
 %build
@@ -72,12 +73,14 @@ software.  These are .h files.
 %defattr(-,root,root)
 %doc docs/*
 %doc docs/dssl/*
-%{_libdir}/libdssl.a
-%{_libdir}/libdssl.la
+%{_libdir}/libdssl.so
+%{_libdir}/libdssl.so.*
 
 %files  -n %{develname}
 %defattr(-,root,root)
 %{_includedir}/dssl/*
 %{_bindir}/ssltrace
+%{_libdir}/libdssl.a
+%{_libdir}/libdssl.la
 
 
