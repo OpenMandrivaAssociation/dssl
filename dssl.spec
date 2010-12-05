@@ -1,6 +1,6 @@
 %define name    dssl
 %define version 1.4.4
-%define release %mkrel 5
+%define release %mkrel 6
 %define major 0
 %define api 1.4
 %define libname %mklibname %{name} %{api} %{major}
