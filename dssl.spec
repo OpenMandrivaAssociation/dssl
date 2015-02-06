@@ -5,7 +5,7 @@
 
 Name:		dssl
 Version:	1.4.4
-Release:	7
+Release:	8
 Summary:    DSSL library: network capture and SSL decryption toolkit
 License:    GPLv3+
 Group:      Networking/Other
