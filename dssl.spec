@@ -9,7 +9,7 @@ Release:	8
 Summary:    DSSL library: network capture and SSL decryption toolkit
 License:    GPLv3+
 Group:      Networking/Other
-URL:        http://www.ssltech.net/
+URL:        https://www.ssltech.net/
 Source:     http://www.ssltech.net/downloads/%{name}-%{version}.tar.gz
 Patch0:		dssl-samples.diff
 BuildRequires:	openssl-devel
