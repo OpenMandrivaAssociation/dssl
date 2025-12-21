@@ -12,6 +12,11 @@ Group:      Networking/Other
 URL:        https://www.ssltech.net/
 Source:     http://www.ssltech.net/downloads/%{name}-%{version}.tar.gz
 Patch0:		dssl-samples.diff
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	openssl-devel
 BuildRequires:	pcap-devel
 BuildRequires:	zlib-devel
